@@ -4,8 +4,10 @@ import cardImage from "../../assets/card_img.png";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { MdEdit } from "react-icons/md";
 
-function Card({ data , deleteEvent}) {
+
+function EventCard({ data , deleteEvent}) {
   const navigate = useNavigate();
 
   const convertTime = (startTime) => {
@@ -19,7 +21,10 @@ function Card({ data , deleteEvent}) {
   return (
     <div className="card-main-container">
       <div className="img-container">
-        <img src={data.backDrop} alt="test image" />
+        { data.backDrop === null || data.backDrop === ""
+          ? <img src={cardImage} alt="Default Card Image" />
+          : <img src={data.backDrop} alt="test image" />
+        }
       </div>
       <div className="card-info-container">
         <div className="info-common data">
@@ -43,11 +48,12 @@ function Card({ data , deleteEvent}) {
       </div>
 
       <div className="btn-container" style={{display:'flex',justifyContent:"space-between"}}>
-        <Button text={"Modify"} style={{width:'max-content',marginLeft:'0%'}} btnClass="primary" action={() => navigate(`/event/${data.id}`)}/>
-        <Button text={"Delete"} style={{width:'max-content',marginLeft:'0%'}} btnClass="primary" action={() => deleteEvent(data.id)}/>
+      {/* icon={{MdEdit}} How to use Icons */}
+        <Button text={"Edit Event"} icon={<MdEdit/>} style={{width:'max-content',marginLeft:'0%'}} btnClass="primary" action={() => navigate(`/event/${data.id}`)}/>
+        {/* <Button text={"Delete"} style={{width:'max-content',marginLeft:'0%'}} btnClass="primary" action={() => deleteEvent(data.id)}/> */}
       </div>
     </div>
   );
 }
 
-export default Card;
+export default EventCard;
