@@ -10,11 +10,14 @@ import { MdEdit } from "react-icons/md";
 function EventCard({ data , deleteEvent}) {
   const navigate = useNavigate();
 
-  const convertTime = (startTime) => {
-    const date = new Date(startTime / (startTime >= 1000000000 ? 1 : 1000000)); // divide by 1 billion for seconds, 1 million for nanoseconds
+  const convertDate = (startTime) => {
+    const date = new Date(startTime); // divide by 1 billion for seconds, 1 million for nanoseconds
+    const day = date.getDate();
+    const month = date.getMonth()+1;
+    const year = date.getFullYear();
     const hours = date.getHours();
     const minutes = date.getMinutes();
-    const timeStr = `${hours % 12 === 0 ? 12 : hours % 12}:${minutes < 10 ? '0' : ''}${minutes} ${hours < 12 ? 'AM' : 'PM'}`;
+    const timeStr = `${day}-${month}-${year} ${hours % 12 === 0 ? 12 : hours % 12}:${minutes < 10 ? '0' : ''}${minutes} ${hours < 12 ? 'AM' : 'PM'}`;
     return timeStr;
   };
 
@@ -28,13 +31,12 @@ function EventCard({ data , deleteEvent}) {
       </div>
       <div className="card-info-container">
         <div className="info-common data">
-          <p>Event Name</p>
-          <p>{data.eventName}</p>
+          <p className="event-name">{data.eventName}</p>
         </div>
-        <div className="info-common data">
+        {/* <div className="info-common data">
           <p>Date</p>
-          <p>{new Date(data.eventDate).toDateString()}</p>
-        </div>
+          <p></p>
+        </div> */}
 
         <div className="info-common venue">
           <p>Venue</p>
@@ -43,13 +45,13 @@ function EventCard({ data , deleteEvent}) {
 
         <div className="info-common time">
           <p>Time</p>
-          <p>{convertTime(data.startTime) }</p>
+          <p>{convertDate(data.startTime) }</p>
         </div>
       </div>
 
-      <div className="btn-container" style={{display:'flex',justifyContent:"space-between"}}>
+      <div className="btn-container" style={{display:'flex',justifyContent:"center"}}>
       {/* icon={{MdEdit}} How to use Icons */}
-        <Button text={"Edit Event"} icon={<MdEdit/>} style={{width:'max-content',marginLeft:'0%'}} btnClass="primary" action={() => navigate(`/event/${data.id}`)}/>
+        <Button text={"Edit Event"} icon={<MdEdit/>} style={{width:'max-content',marginLeft:'0%'}} btnClass="primary button-icon" action={() => navigate(`/event/${data.id}`)}/>
         {/* <Button text={"Delete"} style={{width:'max-content',marginLeft:'0%'}} btnClass="primary" action={() => deleteEvent(data.id)}/> */}
       </div>
     </div>
