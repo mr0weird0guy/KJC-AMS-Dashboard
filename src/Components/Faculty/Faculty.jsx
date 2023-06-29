@@ -1,17 +1,17 @@
-const FacultyPage = () => {
-    const centerDiv = {
-      height: "100vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }
+import React from 'react';
+import Header from '../Header/Header';
+import PageControls from '../PageControls/PageControls';
+import { BsFillPersonPlusFill } from "react-icons/bs"
+
+
+const FacultyPage = () => {  
+  return (
+    <>
+      <Header icon={<BsFillPersonPlusFill/>} text={"Faculty"}></Header>
+      <PageControls inputplaceholder='Search Faculty'/>
+    </>
+  )
+}
   
-    return (
-      <div style={centerDiv}>
-        <h1>Faculty</h1>
-      </div>
-    )
-  }
-  
-  export default FacultyPage
+export default FacultyPage
   
