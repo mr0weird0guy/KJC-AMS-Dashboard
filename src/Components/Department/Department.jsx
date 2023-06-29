@@ -1,15 +1,14 @@
-const Department = () => {
-    const centerDiv = {
-      height: "100vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }
-  
+import React from 'react';
+import Header from '../Header/Header';
+import PageControls from '../PageControls/PageControls';
+import {FaGraduationCap} from "react-icons/fa"
+
+const Department = () => {  
     return (
-      <div style={centerDiv}>
-        <h1>Department</h1>
-      </div>
+      <>
+        <Header icon={<FaGraduationCap/>} text={"Department"}></Header>
+        <PageControls inputplaceholder='Search Department'/>
+      </>
     )
   }
   

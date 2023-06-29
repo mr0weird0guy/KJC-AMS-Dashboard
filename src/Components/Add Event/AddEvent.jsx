@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "../Button/Button";
 import Header from "../Header/Header";
+import { MdCalendarMonth } from "react-icons/md"
 import { createDocument, readDocuments , uploadFile} from '../../Controllers/index'
 import { useNavigate } from "react-router-dom";
 import "./AddEvent.scss";
@@ -82,9 +83,7 @@ function AddEvent() {
 
   return (
     <>
-      <div className="head">
-        <Header headerText="Add Event" className="" />
-      </div>
+      <Header icon={<MdCalendarMonth/>} text={"Add Event"}></Header>
 
       <div className="add-events-outer-container">
         <div className="add-events-main-container">

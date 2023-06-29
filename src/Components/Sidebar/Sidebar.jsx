@@ -1,7 +1,7 @@
 import React from "react"
 import "./Sidebar.css"
 import { MdCalendarMonth, MdHome } from "react-icons/md"
-import { BsBuildingAdd } from "react-icons/bs"
+import { BsBuildingAdd,BsFillPersonPlusFill } from "react-icons/bs"
 import {FaGraduationCap} from "react-icons/fa"
 import Button from "../Button/Button"
 import { Link, NavLink } from "react-router-dom"
@@ -34,7 +34,7 @@ function Sidebar() {
         </NavLink>
 
         <NavLink to={"/faculty"} className="nav-links-common">
-          <BsBuildingAdd />
+          <BsFillPersonPlusFill />
           <p>Faculty</p>
         </NavLink>
 

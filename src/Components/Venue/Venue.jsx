@@ -1,15 +1,14 @@
-const Venue = () => {
-  const centerDiv = {
-    height: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }
+import React from 'react';
+import Header from '../Header/Header';
+import PageControls from '../PageControls/PageControls';
+import {BsBuildingAdd} from "react-icons/bs"
 
+const Venue = () => {
   return (
-    <div style={centerDiv}>
-      <h1>Venue</h1>
-    </div>
+  <>
+    <Header icon={<BsBuildingAdd/>} text={"Venue"}></Header>
+    <PageControls inputplaceholder='Search Venue'/>
+  </>
   )
 }
 
