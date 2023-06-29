@@ -39,7 +39,7 @@ a {
   height: 3rem;
   /* // Using auto margins to hackishly set the position of the button inside the inputbox */
   position: absolute;
-  margin-left: -8rem;
+  margin-left: -1%;
   margin-top: -1.5rem;
   border-radius: 0.5rem;
 }
