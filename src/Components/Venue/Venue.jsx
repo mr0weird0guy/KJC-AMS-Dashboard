@@ -1,15 +1,13 @@
-import React from 'react';
-import Header from '../Header/Header';
-import PageControls from '../PageControls/PageControls';
-import {BsBuildingAdd} from "react-icons/bs"
+import "./Venue.css"
+import PageHeader from "../PageHeader/PageHeader"
+import { BsBuildingFillAdd } from "react-icons/bs"
 
 const Venue = () => {
-  return (
-  <>
-    <Header icon={<BsBuildingAdd/>} text={"Venue"}></Header>
-    <PageControls inputplaceholder='Search Venue'/>
-  </>
+  return(
+    <div className="venue-main">
+        <PageHeader title="Venue" icon={<BsBuildingFillAdd />} />
+    </div>
   )
 }
 
-export default Venue
+export default Venue;

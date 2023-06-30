@@ -1,9 +1,8 @@
 import React from "react";
 import "./Card.css";
 import cardImage from "../../assets/card_img.png";
-import Button from "../Button/Button";
+import Button from "../Common/Button";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { MdEdit } from "react-icons/md";
 
 

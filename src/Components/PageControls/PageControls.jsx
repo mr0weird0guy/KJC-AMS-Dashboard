@@ -1,6 +1,6 @@
 import React from 'react';
-import Inputbox from '../Inputbox/Inputbox';
-import Button from '../Button/Button';
+import InputBox from '../Common/InputBox'
+import Button from '../Common/Button';
 import "./PageControls.css"
 import { MdSearch,MdAddCircleOutline } from "react-icons/md";
 
@@ -10,7 +10,7 @@ export default function PageControls({
   return (
     <div className="top-controls-container">
       <div className="left-controls">
-        <Inputbox style={{"width":"25vw"}} withButton={false} placeholder={inputplaceholder} buttonIcon={<MdSearch/>} btnText={"Search"} action={(string) => setText(string)} /> {/*click={searchEvent} */}
+        <InputBox style={{"width":"25vw"}} withButton={false} placeholder={inputplaceholder} buttonIcon={<MdSearch/>} btnText={"Search"} action={(string) => setText(string)} /> {/*click={searchEvent} */}
         <Button text={"Add"} icon={<MdAddCircleOutline/>} btnClass="add-event-btn" action={() => addFunction}/>
       </div>
       <div className="right-controls">
@@ -19,3 +19,17 @@ export default function PageControls({
     </div>
   )
 }
+
+// const SearchButton = () => <Button text="Search" icon={<FaSearch />} />
+
+// <Inputbox placeholder="Search Faculty" Button={SearchButton} />
+// <Button
+//   text="Search"
+//   btnClass="success"
+//   icon={<MdAddCircle style={{ height: "1.5rem", width: "1.5rem" }} />}
+// />
+// <Button
+//   text="Search"
+//   btnClass="danger"
+//   icon={<MdDelete style={{ height: "1.5rem", width: "1.5rem" }} />}
+// /> 

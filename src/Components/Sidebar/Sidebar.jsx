@@ -1,10 +1,9 @@
 import React from "react"
 import "./Sidebar.css"
 import { MdCalendarMonth, MdHome } from "react-icons/md"
-import { BsBuildingAdd,BsFillPersonPlusFill } from "react-icons/bs"
-import {FaGraduationCap} from "react-icons/fa"
-import Button from "../Button/Button"
-import { Link, NavLink } from "react-router-dom"
+import { BsBuildingAdd, BsFillPersonFill } from "react-icons/bs"
+import { FaGraduationCap } from "react-icons/fa"
+import { NavLink } from "react-router-dom"
 
 function Sidebar() {
   return (
@@ -22,26 +21,22 @@ function Sidebar() {
           <MdCalendarMonth />
           <p>Events</p>
         </NavLink>
-        
+
         <NavLink to={"/venue"} className="nav-links-common">
           <BsBuildingAdd />
           <p>Venue</p>
         </NavLink>
 
-        <NavLink to={"/department"} className="nav-links-common">
+        <NavLink to={"/organizer"} className="nav-links-common">
           <FaGraduationCap />
-          <p>Department</p>
+          <p>Organizer</p>
         </NavLink>
 
         <NavLink to={"/faculty"} className="nav-links-common">
-          <BsFillPersonPlusFill />
+          <BsFillPersonFill />
           <p>Faculty</p>
         </NavLink>
 
-        {/* <NavLink to={"/event/1"} className="nav-links-common">
-          <MdAddCircle />
-          <p>Event Details</p>
-        </NavLink> */}
       </div>
     </div>
   )
