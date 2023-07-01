@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .card-container{
     overflow: hidden;
     box-shadow: 0px 0px 8px -5px;
@@ -52,4 +53,8 @@ ul{
     background-color:  #f7cad0;
     border: none;
     color: #C70000;
+=======
+.faculty-main {
+    /* padding: 1rem 2rem; */
+>>>>>>> 9107f0a640356cd3cc3d972f6ff442ee76099402
 }

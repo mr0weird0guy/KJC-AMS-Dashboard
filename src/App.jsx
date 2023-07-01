@@ -7,13 +7,11 @@ import Events from "./Components/Events/Events"
 import AllEvents from "./Components/Events/All Events/AllEvents"
 import TodayEvents from "./Components/Events/Today Events/TodayEvents"
 import History from "./Components/Events/All Events/History/History"
-// import VenueDeptFacl from "./Components/VenueDeptFacl/VenueDeptFacl";
 import Venue from "./Components/Venue/Venue"
-import Department from "./Components/Department/Department"
-import FacultyPage from "./Components/Faculty/Faculty"
+import Organizer from "./Components/Organizer/Organizer"
+import Faculty from "./Components/Faculty/Faculty"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import Faculty from "./Components/EventDetails/Child/Faculty"
 
 function App() {
   return (
@@ -48,11 +46,11 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route path="department" element={<Department />}></Route>
+          <Route path="organizer" element={<Organizer />}></Route>
         </Routes>
 
         <Routes>
-          <Route path="faculty" element={<FacultyPage />}></Route>
+          <Route path="faculty" element={<Faculty />}></Route>
         </Routes>
 
         {/* Event Details */}
