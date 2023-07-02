@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card from "../../Card/EventCard";
+import EventCard from "../../EventCard/EventCard";
 import "./AllEvents.css";
 import { readDocuments , deleteDocument} from '../../../Controllers/index'
 import { toast } from "react-toastify";
@@ -16,6 +16,7 @@ function AllEvents({ currentEventsOnly }) {
     }
   }, [])
 
+  // delete events fuction
   const deleteEvent = async (id) => {
     try {
       await deleteDocument(id, 'Event')
@@ -40,7 +41,7 @@ function AllEvents({ currentEventsOnly }) {
     setLoading(false)
   }
 
-  const eventMap = events.map((event) => <Card key={event.eventID} deleteEvent={deleteEvent} data={event} />)
+  const eventMap = events.map((event) => <EventCard key={event.eventID} data={event} />)
 
   if(!Loading) return (
     <div className="all-events-container">
