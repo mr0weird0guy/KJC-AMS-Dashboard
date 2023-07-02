@@ -44,7 +44,7 @@ const Home = () => {
   //   }} />)
   // }
 
-  // const [refreshedItems, Pagination] = usePagination(4, allEvents)
+  const [refreshedItems, Pagination] = usePagination(4, allEvents)
 
   return (
     <div className="home-main">
@@ -63,9 +63,7 @@ const Home = () => {
 
       </div>
 
-      <div className="pagination">
-        {/* <Pagination /> */}
-      </div>
+      <div className="pagination"><Pagination /></div>
     </div>
   )
 }
