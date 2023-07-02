@@ -1,45 +1,33 @@
-<<<<<<< HEAD
 import React from 'react';
-import Header from '../Header/Header';
+import Header from '../PageHeader/PageHeader';
 import PageControls from '../PageControls/PageControls';
 import { BsFillPersonPlusFill } from "react-icons/bs"
-import FacultyCard from './FaculyCard';
-import Card from '@mui/material/Card';
-=======
+import FacultyCard from '../Common/TableCard';
 import PageHeader from "../PageHeader/PageHeader"
-import { BsFillPersonFill } from "react-icons/bs"
-
-import "./Faculty.css"
 
 const FacultyPage = () => {
->>>>>>> 9107f0a640356cd3cc3d972f6ff442ee76099402
 
   return (
-<<<<<<< HEAD
     <>
-      <Header icon={<BsFillPersonPlusFill/>} text={"Faculty"}></Header>
+      <PageHeader icon={<BsFillPersonPlusFill/>} title="Faculty"></PageHeader>
       <PageControls inputplaceholder='Search Faculty'/>
 
       <ul style={{listStyleType: 'none'}}>
           <li>
-          <FacultyCard facultyName='Abhijaan Ganguly' facultyEmail='21bcac05@gmail.com' department='Computer Science(UG)' club='UBA' />
+          <FacultyCard row1='Abhijaan Ganguly' row2='21bcac05@kristujayanti.com' row3='Computer Science(UG)' row4='UBA' />
           </li>
           <li>
-          <FacultyCard facultyName='Abhijaan Ganguly' facultyEmail='21bcac05@gmail.com' department='Computer Science(UG)' club='UBA' />
+          <FacultyCard row1='Abhijaan Ganguly' row2='21bcac05@kristujayanti.com'  row4='UBA' />
           </li>
           <li>
-          <FacultyCard facultyName='Abhijaan Ganguly' facultyEmail='21bcac05@gmail.com' department='Computer Science(UG)' club='UBA' />
+          <FacultyCard row1='Abhijaan Ganguly'  row3='Computer Science(UG)' row4='UBA' />
           </li>
           <li>
-          <FacultyCard facultyName='Abhijaan Ganguly' facultyEmail='21bcac05@gmail.com' department='Computer Science(UG)' club='UBA' />
+          <FacultyCard row1='Abhijaan Ganguly' />
           </li>
         </ul>
     </>
-=======
-    <div className="faculty-main">
-      <PageHeader title="Faculty" icon={<BsFillPersonFill />} />
-    </div>
->>>>>>> 9107f0a640356cd3cc3d972f6ff442ee76099402
+
   )
 }
 
