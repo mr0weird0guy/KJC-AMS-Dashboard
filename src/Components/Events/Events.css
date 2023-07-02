@@ -28,6 +28,7 @@ a {
 .right-main-container {
   height: 100vh;
   width: 80%;
+  overflow-y: scroll;
 }
 
 .events-main-container {
