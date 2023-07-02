@@ -18,7 +18,7 @@ export default function PageControls({
         <InputBox
           placeholder={inputplaceholder}
           Button={SearchButton}
-          style={{ width: "25vw" }}
+          inputStyle={{ "width" : "calc(100vw*0.3)" }}
         />
 
         <Button

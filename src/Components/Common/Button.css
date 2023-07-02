@@ -24,24 +24,40 @@
   border: 2px solid #1d4ed8;
 }
 
+.btn-container .primary:hover {
+  color: #1d4ed8;
+  background-color: #f7f8fc;
+}
+
 .btn-container .secondary {
   background: transparent;
   border: 2px solid #1d4ed8;
   color: #1d4ed8;
 }
+
 .btn-container .secondary:hover {
-    background-color: #1d4ed8;
-    color: white;
+  background-color: #1d4ed8;
+  color: #f7f8fc;
 }
 
 .btn-container .success {
-    color: white;
-    background-color: #388E3C;
-    border: 2px solid #388E3C;
+  color: white;
+  background-color: #388E3C;
+  border: 2px solid #388E3C;
+}
+
+.btn-container .success:hover {
+  color: #388E3C;
+  background-color: #f7f8fc;
 }
 
 .btn-container .danger {
-    color: white;
-    background-color: #bb2d3b;
-    border: 2px solid #bb2d3b;
+  color: white;
+  background-color: #bb2d3b;
+  border: 2px solid #bb2d3b;
+}
+
+.btn-container .danger:hover {
+  color: #bb2d3b;
+  background-color: #f7f8fc;
 }

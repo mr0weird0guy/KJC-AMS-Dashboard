@@ -1,14 +1,18 @@
 import PageHeader from "../PageHeader/PageHeader"
 import { BsFillPersonFill } from "react-icons/bs"
-
+import PageControls from "../PageControls/PageControls"
 import "./Faculty.css"
 
 const FacultyPage = () => {
 
   return (
-    <div className="faculty-main">
+    <>
       <PageHeader title="Faculty" icon={<BsFillPersonFill />} />
-    </div>
+      <PageControls inputplaceholder="Search Faculty" />
+      <div className="faculty-main">
+        {/* add content here */}
+      </div>
+    </>
   )
 }
 
