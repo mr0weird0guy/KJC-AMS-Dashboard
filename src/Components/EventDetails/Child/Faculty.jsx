@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../index.css'
+// import '../../.././'
 import { AiFillDelete } from 'react-icons/ai'
 import Button from '../../Common/Button'
 import { updateDocument, readDocuments } from '../../../Controllers/index'

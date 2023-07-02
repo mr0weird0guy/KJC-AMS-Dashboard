@@ -5,8 +5,6 @@ import { BsFillPersonPlusFill } from "react-icons/bs"
 import FacultyCard from '../Common/TableCard';
 import PageHeader from "../PageHeader/PageHeader"
 import { BsFillPersonFill } from "react-icons/bs"
-import PageControls from "../PageControls/PageControls"
-import "./Faculty.css"
 
 const FacultyPage = () => {
 
