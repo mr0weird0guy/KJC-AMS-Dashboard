@@ -1,22 +1,28 @@
 import React from 'react';
-import Header from '../PageHeader/PageHeader';
-import PageControls from '../PageControls/PageControls';
+import PageControls from '../Common/PageControls';
 import { BsFillPersonPlusFill } from "react-icons/bs"
 import TableCard from '../Common/TableCard';
-import PageHeader from "../PageHeader/PageHeader"
+import PageHeader from "../Common/PageHeader"
 import { BsFillPersonFill } from "react-icons/bs"
 import { readDocuments } from '../../Controllers/index';
 import './Faculty.css'
 
 const FacultyPage = () => {
 
+  const searchParam = new URLSearchParams(document.location.search)
+  const searchData = searchParam.get('search')
+
   const facultyData = readDocuments("faculty");
   console.log({facultyData});
   return (
     <>
     <PageHeader title="Faculty" icon={<BsFillPersonFill />} />
+    <PageControls
+      inputplaceholder="Search Faculty"
+      setSearchText = {searchData}
+      pageSlug={"faculty"}
+    />
     <div className='main-container'>
-      <PageControls inputplaceholder="Search Faculty" />
       <div className='table-container'>
         <ul style={{listStyleType: 'none'}} >
           {/* {facultyData.map((faculty) => 

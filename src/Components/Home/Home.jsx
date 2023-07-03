@@ -1,5 +1,5 @@
-import PageHeader from "../PageHeader/PageHeader"
-import PageControls from "../PageControls/PageControls"
+import PageHeader from "../Common/PageHeader"
+import PageControls from "../Common/PageControls"
 import DropDown from "../Common/DropDown"
 import EventCard from "../EventCard/EventCard"
 import { MdCalendarMonth } from "react-icons/md"
@@ -15,10 +15,21 @@ const itemsPerPage = 8
 
 const Home = () => {
   const [allEvents, setAllEvents] = useState([])
+  const searchParam = new URLSearchParams(document.location.search)
+  const searchData = searchParam.get('search')
+
+  let events;
+
 
   async function getEvents() {
     const data = await readDocuments("/events")
-    const events = data.map((event) => <EventCard key={event.eventID} data={event} />)
+    if(searchData){
+      events = data
+      .filter((event) => event.eventName === searchedValue)
+      .map((event) => <EventCard key={event.eventID} data={event} />)
+    } else {
+      events = data.map((event) => <EventCard key={event.eventID} data={event} />)
+    }
     return events
   }
 
@@ -51,7 +62,6 @@ const Home = () => {
     />
   )
 
-
   const RefreshedItems = ({ currentItems = [] }) => {
     return <>{currentItems}</>
   }
@@ -71,6 +81,8 @@ const Home = () => {
     <div className="home-main">
       <PageHeader title="Home" icon={<MdCalendarMonth />} />
       <PageControls
+        setText = {searchData}
+        pageSlug={"home"}
         inputplaceholder="Search Events"
         dropDowns={[sortByDropDown, showDropDown]}
       />
