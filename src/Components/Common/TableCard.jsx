@@ -2,16 +2,10 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faEnvelope, faUserPen, faUserMinus} from '@fortawesome/free-solid-svg-icons'
 import { BiEdit } from "react-icons/bi";
-
-import Card from '@mui/material/Card';
-// import Button from '@mui/material/Button';
-// import Button from '@mui/material/Button';
 import Button from "./Button";
 import "./TableCard.css"
-
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { MdDelete } from "react-icons/md";
-import { colors } from "@mui/material";
   
 function FacultyCard (props){
     const cars = [0,0,0,0];

@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc, getDocs, updateDoc, doc, deleteDoc , getDoc , writeBatch} from 'firebase/firestore';
+import { getFirestore, collection, addDoc, getDocs, updateDoc, doc, deleteDoc , getDoc , writeBatch, query, where} from 'firebase/firestore';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 const firebaseConfig = {
@@ -35,6 +35,17 @@ async function createDocument(name,payload) {
 //             dataArray.push(data);
 //         });
 //         return dataArray;
+//     } catch (error) {
+//         console.error('Error reading documents:', error);
+//         return [];
+//     }
+// }
+
+// async function searchDocuments(collectionName, searchItem, searchData){
+//     try {
+//         const searchQuery = query(collection(db, collectionName), where(searchItem, "==", searchData));
+//         const searchResult = await getDocs(searchQuery)
+//         return searchResult;
 //     } catch (error) {
 //         console.error('Error reading documents:', error);
 //         return [];
@@ -142,6 +153,7 @@ async function uploadFile(file, path) {
 export {
     createDocument,
     readDocuments,
+    searchDocuments,
     updateDocument,
     deleteDocument,
     uploadFile,

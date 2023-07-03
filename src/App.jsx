@@ -27,6 +27,8 @@ function App() {
         {/* Home */}
         <Routes>
           <Route path="/" element={ <Navigate  to="/home/allevents" /> } />
+        </Routes>
+        <Routes>
           <Route path="/home" element={<Home />}>
             <Route path="allevents" element={<AllEvents />}></Route>
             <Route path="todayevent" element={<TodayEvents />}></Route>
