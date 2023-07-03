@@ -8,7 +8,7 @@
     margin-bottom: 15px;
     border-radius: 8px;
     color: #5A5A5A;
-    margin: 30px 5px; 
+    background-color: white;
 }
 
 .card-container:hover{
@@ -25,54 +25,17 @@
     /* margin: 30px 5px;  */
 }
 
-ul{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 flex-item{
     background-color: white;
     /* flex: 1 0 calc(20% - 10px); */
-    margin: 5px;
+    margin:  5px;
     /*** Just to center the text ***/
     display: inline-flex;
     justify-content: center;
     text-align: center;
 }
 
-.button{
-    width: 128px;
+.btn-container .card-button{
+    height: 2.5rem;
     margin: 0px 5px;
-    /* height: 48px; */
-    padding: 5px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-.edit{
-    background-color:  #1D4ED8;
-    border: none;
-    color: white;
-}
-
-.edit:hover{
-    background-color:  #bbdefb;
-    border: none;
-    color: #1D4ED8;
-}
-
-.delete{
-    background-color:  #C70000;
-    border: none;
-    color: white;
-}
-
-.delete:hover{
-    background-color:  #f7cad0;
-    border: none;
-    color: #C70000;
 }

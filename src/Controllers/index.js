@@ -25,15 +25,29 @@ async function createDocument(name,payload) {
     }
 }
 
+// async function readDocuments(name) {
+//     try {
+//         const querySnapshot = await getDocs(collection(db, name));
+//         const dataArray = [];
+//         querySnapshot.forEach((doc) => {
+//             const data = doc.data();
+//             data.id = doc.id; 
+//             dataArray.push(data);
+//         });
+//         return dataArray;
+//     } catch (error) {
+//         console.error('Error reading documents:', error);
+//         return [];
+//     }
+// }
+
 async function readDocuments(name) {
     try {
         const querySnapshot = await getDocs(collection(db, name));
-        const dataArray = [];
-        querySnapshot.forEach((doc) => {
-            const data = doc.data();
-            data.id = doc.id; 
-            dataArray.push(data);
-        });
+        const dataArray = querySnapshot.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+        }));
         return dataArray;
     } catch (error) {
         console.error('Error reading documents:', error);

@@ -35,12 +35,16 @@ function FacultyCard (props){
                     <p  style={{flex:flexValue(props.row4), alignItems: "center"}}>{
                     props.row4
                     }</p>
-                    {/* <div className="flex" style={{flex:1}}> */}
-                        <Button  style={{flex:1}}
+                    {/* <div className="flex" style={{flex:2}}> */}
+                        <Button  
+                        btnClass='primary card-button'
+                        style={{flex:1,}}
                         icon={ <BiEdit />} 
                         text={'Edit'} /> 
                         
-                        <Button  style={{flex:1}}
+                        <Button  
+                        btnClass='danger card-button'
+                        // style={{flex:1}}
                         icon={<MdDelete/>} 
                         text={'Delete'}  /> 
                     {/* </div> */}
