@@ -36,7 +36,7 @@ const Home = () => {
   // Fetch Events on page load
   useEffect(() => {
     getEvents().then((events) => setAllEvents(events))    
-  }, [allEvents])
+  }, [])
 
   const sortByDropDown = () => (
     <DropDown
