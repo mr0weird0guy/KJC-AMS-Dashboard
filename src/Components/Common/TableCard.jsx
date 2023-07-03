@@ -2,16 +2,10 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faEnvelope, faUserPen, faUserMinus} from '@fortawesome/free-solid-svg-icons'
 import { BiEdit } from "react-icons/bi";
-
-import Card from '@mui/material/Card';
-// import Button from '@mui/material/Button';
-// import Button from '@mui/material/Button';
 import Button from "./Button";
 import "./TableCard.css"
-
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { MdDelete } from "react-icons/md";
-import { colors } from "@mui/material";
   
 function FacultyCard (props){
     const cars = [0,0,0,0];
@@ -35,12 +29,16 @@ function FacultyCard (props){
                     <p  style={{flex:flexValue(props.row4), alignItems: "center"}}>{
                     props.row4
                     }</p>
-                    {/* <div className="flex" style={{flex:1}}> */}
-                        <Button  style={{flex:1}}
+                    {/* <div className="flex" style={{flex:2}}> */}
+                        <Button  
+                        btnClass='primary card-button'
+                        style={{flex:1,}}
                         icon={ <BiEdit />} 
                         text={'Edit'} /> 
                         
-                        <Button  style={{flex:1}}
+                        <Button  
+                        btnClass='danger card-button'
+                        // style={{flex:1}}
                         icon={<MdDelete/>} 
                         text={'Delete'}  /> 
                     {/* </div> */}
